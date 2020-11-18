@@ -13,7 +13,123 @@ body {
   line-height: 1.43;
 }
 
+.btn-white {
+  color: #686f7a;
+  font-weight: 600;
+  background-color: #fff;
+  border: 1px solid #505763;
+}
+
+.btn-white:hover {
+  background-color: rgba(20, 23, 28, 0.05);
+  color: #686f7a;
+}
+
+.btn-red {
+  color: #fff;
+  font-weight: 600;
+  background-color: #ec5252;
+  border: 1px solid #ec5252;
+}
+
+.btn-red:hover {
+  background-color: #521822;
+  color: #fff;
+}
+
+.myNavBar {
+  border-bottom: 1px solid #cacbcc;
+}
+
+.myNavBar .navbar-brand {
+  flex-grow: 1;
+}
+
 .myNavBar .navbar-brand img {
   width: 110px;
+}
+
+.myNavBar .categories {
+  flex-grow: 1;
+  color: #505763;
+  font-size: 13px;
+  font-weight: normal;
+  align-self: center;
+}
+
+.myNavBar .input_search {
+  flex-grow: 5;
+}
+
+.myNavBar .input_search .form-control {
+  background-color: rgba(20, 23, 28, 0.05);
+  border: none;
+  transition: none;
+}
+
+.myNavBar .input_search .form-control:focus {
+  box-shadow: none;
+  background-color: #fff;
+  border-top: 1px solid #cacbcc;
+  border-bottom: 1px solid #cacbcc;
+  border-left: 1px solid #cacbcc;
+}
+
+.myNavBar .input_search .form-control:focus + .input-group-prepend .input-group-text {
+  color: #ec5252;
+  background-color: #fff;
+  border-top: 1px solid #cacbcc;
+  border-bottom: 1px solid #cacbcc;
+  border-right: 1px solid #cacbcc;
+}
+
+.myNavBar .input_search .form-control:focus + .input-group-prepend:hover .input-group-text {
+  color: #fff;
+  background-color: #ec5252;
+}
+
+.myNavBar .input_search .input-group-prepend .input-group-text {
+  background: rgba(20, 23, 28, 0.05);
+  color: #ec5252;
+  border: none;
+}
+
+.myNavBar .input_search .input-group-prepend:hover .input-group-text {
+  color: #fff;
+  background-color: #ec5252;
+}
+
+.myNavBar .navbar-nav {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.myNavBar .navbar-nav .nav-item .nav-link {
+  color: #505763;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 10px 20px;
+}
+
+.myNavBar .navbar-nav .nav-item:hover {
+  background-color: rgba(20, 23, 28, 0.05);
+}
+
+.myNavBar .navbar-nav .nav-item:nth-child(3) {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .myNavBar .navbar-nav .business,
+  .myNavBar .navbar-nav .instructor {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myNavBar .categories,
+  .myNavBar .input_search {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

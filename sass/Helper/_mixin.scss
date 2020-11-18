@@ -1,0 +1,28 @@
+@mixin text($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin button($color, $fw, $bg-color, $border-color, $bg-color-hover) {
+    color: $color;
+    font-weight: $fw;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    &:hover {
+        background-color: $bg-color-hover;
+        color: $color;
+    }
+}
+@mixin responsive-to($breakpoint) {
+    @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $breakpoint,
+        );
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "breakpoint does not exist";
+    }
+}
